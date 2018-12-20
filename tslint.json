@@ -25,7 +25,6 @@
             }
         ],
         "no-irregular-whitespace": true,
-        "space-before-function-paren": true,
         "trailing-comma": false,
         "member-ordering": [
             true,
@@ -38,7 +37,8 @@
                     "static-method"
                 ]
             }
-        ]
+        ],
+        "interface-name" : [true, "never-prefix"]
     },
     "rulesDirectory": []
 }
