@@ -1,5 +1,5 @@
 {
-  "name": "typescriptSettings",
+  "name": "typescriptsettings",
   "version": "0.0.1",
   "description": "Simple library settings written in typescript",
   "main": "lib/index.js",
