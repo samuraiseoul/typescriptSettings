@@ -38,7 +38,9 @@
                 ]
             }
         ],
-        "interface-name" : [true, "never-prefix"]
+        "interface-name" : [true, "never-prefix"],
+        "max-line-length": [true, {"limit" : 160, "ignore-pattern" : "//"}],
+        "object-literal-sort-keys": false
     },
     "rulesDirectory": []
 }
