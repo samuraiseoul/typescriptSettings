@@ -1,0 +1,33 @@
+{
+  "name": "typescriptSettings",
+  "version": "0.0.01",
+  "description": "Simple library settings written in typescript",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "private": false,
+  "author": "Scott Lavigne",
+  "license": "GPL-3.0-or-later",
+  "files": [ "/lib" ],
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samuraiseoul/typescriptSettings.git"
+  },
+  "engines": {
+    "node": ">=8.10"
+  },
+  "scripts": {
+    "test": "npm run clearlibraries && npm install && tsc && npm run lint && mocha lib/tests/SettingsTest.js",
+    "lint": "tslint --project ./tsconfig.json",
+    "clearlibraries": "rm -rf ./node_modules/ ./lib/",
+    "prepublishOnly": "npm test && npm version patch",
+    "postpublish": "git push origin master --tags"
+  },
+  "devDependencies": {
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.12.18",
+    "mocha": "^5.2.0",
+    "tslint": "^5.12.0",
+    "typescript": "^3.2.2"
+  }
+}
