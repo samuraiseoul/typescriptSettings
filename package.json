@@ -8,7 +8,8 @@
   "author": "Scott Lavigne",
   "license": "GPL-3.0-or-later",
   "files": [
-    "/lib"
+    "/lib/src",
+    "/lib/index.*"
   ],
   "keywords": [],
   "repository": {
