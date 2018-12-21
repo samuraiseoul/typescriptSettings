@@ -17,7 +17,7 @@ export default class Settings {
         return this.settings;
     }
 
-    public static getSetting<T>(getter : (settings : any) => T) : T {
+    public static getSetting<T>(getter : (settings : ReadonlyObjectInterface) => T) : T {
         return getter(this.getSettings());
     }
 
