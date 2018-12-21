@@ -17,6 +17,10 @@ export default class Settings {
         return this.settings;
     }
 
+    public static getSetting<T>(getter : (settings : any) => T) : T {
+        return getter(this.getSettings());
+    }
+
     private static readInSettings() : ReadonlyObjectInterface {
         return JSON.parse(FileSystem.readFileSync(this.SETTINGS_FILE, this.SETTINGS_FILE_ENCODING));
     }

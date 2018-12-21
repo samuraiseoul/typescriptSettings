@@ -6,8 +6,12 @@ describe("Settings", function testSettings() {
         it("opens and reads the typescriptSettings file", function openAndRead() {
             assert.strictEqual(Settings.getSettings().field, "value");
         });
-        it("only has one field", function openAndRead() {
-            assert.strictEqual(Object.keys(Settings.getSettings()).length, 1);
+
+        it("returns settings of type", function getTypedSetting() {
+            interface BasicSetting {
+                "secret" : string;
+            }
+            assert.strictEqual(Settings.getSetting<BasicSetting>((settings) => settings.basic as BasicSetting).secret, "apiKey");
         });
     });
 });
